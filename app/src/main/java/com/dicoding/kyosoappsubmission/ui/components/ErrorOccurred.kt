@@ -14,7 +14,7 @@ import androidx.compose.ui.unit.dp
 import com.dicoding.kyosoappsubmission.R
 
 @Composable
-fun DataNotFound() {
+fun ErrorOccurred() {
     Box(
         contentAlignment = Alignment.Center,
         modifier = Modifier.fillMaxSize()
@@ -23,13 +23,14 @@ fun DataNotFound() {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Image(
-                painter = painterResource(R.drawable.data_not_found_image),
+                painter = painterResource(R.drawable.error_image),
                 contentDescription = null,
                 modifier = Modifier
                     .size(150.dp)
+
             )
             Text(
-                text = stringResource(R.string.data_not_found),
+                text = stringResource(R.string.error_message),
                 textAlign = TextAlign.Center
             )
         }
@@ -39,6 +40,6 @@ fun DataNotFound() {
 
 @Preview
 @Composable
-fun DataNotFoundPreview() {
-    DataNotFound()
+fun ErrorOccurredPreview() {
+    ErrorOccurred()
 }
