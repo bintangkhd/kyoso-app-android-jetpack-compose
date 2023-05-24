@@ -16,14 +16,14 @@ interface AnimeDAO {
     fun getAnimeDetail(id: Int): Flow<Anime>
 
     @Query("SELECT * FROM anime WHERE name LIKE '%' || :query || '%'")
-    fun searchAnime(query: String): Flow<List<Anime>>
+    fun searchAnime(anime: String): Flow<List<Anime>>
 
-    @Query("SELECT * FROM anime WHERE isFavorite = 1")
+    @Query("SELECT * FROM anime WHERE favorite = 1")
     fun getFavoriteAnimeList(): Flow<List<Anime>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertAnimeList(tourismList: List<Anime>)
+    suspend fun insertAnimeList(animeList: List<Anime>)
 
-    @Query("UPDATE tourism SET isFavorite = :isFavorite WHERE id = :id")
-    suspend fun updateFavoriteAnime(id: Int, isFavorite: Boolean)
+    @Query("UPDATE tourism SET favorite = :favorite WHERE id = :id")
+    suspend fun updateFavoriteAnime(id: Int, favorite: Boolean)
 }
