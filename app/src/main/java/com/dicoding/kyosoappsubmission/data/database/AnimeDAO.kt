@@ -16,7 +16,7 @@ interface AnimeDAO {
     fun getAnimeDetail(id: Int): Flow<Anime>
 
     @Query("SELECT * FROM anime WHERE name LIKE '%' || :query || '%'")
-    fun searchAnime(anime: String): Flow<List<Anime>>
+    fun searchAnime(query: String): Flow<List<Anime>>
 
     @Query("SELECT * FROM anime WHERE favorite = 1")
     fun getFavoriteAnimeList(): Flow<List<Anime>>
@@ -24,6 +24,6 @@ interface AnimeDAO {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAnimeList(animeList: List<Anime>)
 
-    @Query("UPDATE tourism SET favorite = :favorite WHERE id = :id")
+    @Query("UPDATE anime SET favorite = :favorite WHERE id = :id")
     suspend fun updateFavoriteAnime(id: Int, favorite: Boolean)
 }

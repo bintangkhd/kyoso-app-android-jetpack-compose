@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">KyosoAppSubmission</string>
+    <string name="data_not_found">No data found!\nPlease search with another keyword.</string>
 </resources>
