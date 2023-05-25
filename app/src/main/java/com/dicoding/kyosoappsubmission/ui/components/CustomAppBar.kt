@@ -113,7 +113,7 @@ fun CustomAppBar(
                     Spacer(modifier = Modifier.width(10.dp))
 
                     IconButton(onClick = {
-                        navController.navigate(NavScreen.ProfilePage.route)
+                        navController.navigate(NavScreen.FavoritePage.route)
                     }) {
                         Icon(
                             imageVector = Icons.Rounded.Favorite,

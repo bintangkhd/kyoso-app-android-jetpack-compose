@@ -62,7 +62,7 @@ fun AnimeCardItem(
                         horizontalArrangement = Arrangement.SpaceBetween
                     ) {
                         Text(
-                            text = ranked,
+                            text = "Popularity $ranked",
                             style = MaterialTheme.typography.body2.copy(fontSize = 12.sp),
                             color = MaterialTheme.colors.onPrimary
                         )
@@ -139,7 +139,7 @@ fun AnimeCardItemPreview() {
         photoUrl = "https://wallpapercave.com/wp/wp5165281.jpg",
         author = "Gege Akutami",
         releaseDate = "2022-01-01",
-        ranked = "Popularity Rank #1",
+        ranked = "Rank #1",
         rating = 8.78,
         reviewers = 10007849,
         favorite = false,

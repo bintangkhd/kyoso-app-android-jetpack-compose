@@ -5,6 +5,6 @@ sealed class NavScreen(val route: String) {
     object AnimeDetailPage : NavScreen("home/{tourismId}") {
         fun createRoute(tourismId: Int) = "home/$tourismId"
     }
-    object ProfilePage : NavScreen("profile")
+    object AboutPage : NavScreen("about_page")
     object FavoritePage : NavScreen("favorite")
 }

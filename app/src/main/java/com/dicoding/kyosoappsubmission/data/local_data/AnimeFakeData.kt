@@ -8,7 +8,7 @@ object AnimeFakeData {
             photoUrl = "https://wallpapercave.com/wp/wp2114772.jpg",
             author = "Hajime Isayama",
             releaseDate = "Apr 7, 2013",
-            ranked = "Popularity #1",
+            ranked = "Rank #1",
             rating = 8.54,
             reviewers = 2649483,
             synopsis = "Centuries ago, mankind was slaughtered to near extinction by monstrous humanoid creatures called Titans, forcing humans to hide in fear behind enormous concentric walls. What makes these giants truly terrifying is that their taste for human flesh is not born out of hunger but what appears to be out of pleasure. To ensure their survival, the remnants of humanity began living within defensive barriers, resulting in one hundred years without a single titan encounter. However, that fragile calm is soon shattered when a colossal Titan manages to breach the supposedly impregnable outer wall, reigniting the fight for survival against the man-eating abominations.\n\n" +
@@ -20,7 +20,7 @@ object AnimeFakeData {
             photoUrl = "https://wallpapercave.com/wp/er4khNt.jpg",
             author = "Tsugumi Ohba",
             releaseDate = "Oct 4, 2006",
-            ranked = "Popularity #2",
+            ranked = "Rank #2",
             rating = 8.62,
             reviewers = 2608368,
             synopsis = "Brutal murders, petty thefts, and senseless violence pollute the human world. In contrast, the realm of death gods is a humdrum, unchanging gambling den. The ingenious 17-year-old Japanese student Light Yagami and sadistic god of death Ryuk share one belief: their worlds are rotten.\n\n" +
@@ -33,7 +33,7 @@ object AnimeFakeData {
             photoUrl = "https://wallpapercave.com/wp/PPhKgzo.jpg",
             author = "Hiromu Arakawa",
             releaseDate = "Apr 5, 2009",
-            ranked = "Popularity #3",
+            ranked = "Rank #3",
             rating = 9.10,
             reviewers = 2011213,
             synopsis = "After a horrific alchemy experiment goes wrong in the Elric household, brothers Edward and Alphonse are left in a catastrophic new reality. Ignoring the alchemical principle banning human transmutation, the boys attempted to bring their recently deceased mother back to life. Instead, they suffered brutal personal loss: Alphonse's body disintegrated while Edward lost a leg and then sacrificed an arm to keep Alphonse's soul in the physical realm by binding it to a hulking suit of armor.\n\n" +
@@ -46,7 +46,7 @@ object AnimeFakeData {
             photoUrl = "https://wallpapercave.com/wp/wp1809902.jpg",
             author = "ONE",
             releaseDate = "Oct 5, 2015",
-            ranked = "Popularity #4",
+            ranked = "Rank #4",
             rating = 8.50,
             reviewers = 2121912,
             synopsis = "The seemingly unimpressive Saitama has a rather unique hobby: being a hero. In order to pursue his childhood dream, Saitama relentlessly trained for three years, losing all of his hair in the process. Now, Saitama is so powerful, he can defeat any enemy with just one punch. However, having no one capable of matching his strength has led Saitama to an unexpected problem—he is no longer able to enjoy the thrill of battling and has become quite bored.\n\n" +
@@ -58,7 +58,7 @@ object AnimeFakeData {
             photoUrl = "https://wallpapercave.com/wp/wp1809740.png",
             author = "Reki Kawahara",
             releaseDate = "Jul 8, 2012",
-            ranked = "Popularity #5",
+            ranked = "Rank #5",
             rating = 8.70,
             reviewers = 2065306,
             synopsis = "Ever since the release of the innovative NerveGear, gamers from all around the globe have been given the opportunity to experience a completely immersive virtual reality. Sword Art Online (SAO), one of the most recent games on the console, offers a gateway into the wondrous world of Aincrad, a vivid, medieval landscape where users can do anything within the limits of imagination. With the release of this worldwide sensation, gaming has never felt more lifelike.\n\n" +
@@ -71,7 +71,7 @@ object AnimeFakeData {
             photoUrl = "https://wallpapercave.com/wp/wp1874036.jpg",
             author = "Kohei Horikoshi",
             releaseDate = "Apr 3, 2016",
-            ranked = "Popularity #6",
+            ranked = "Rank #6",
             rating = 7.90,
             reviewers = 1969712,
             synopsis = "The appearance of \"quirks,\" newly discovered super powers, has been steadily increasing over the years, with 80 percent of humanity possessing various abilities from manipulation of elements to shapeshifting. This leaves the remainder of the world completely powerless, and Izuku Midoriya is one such individual.\n\n" +
@@ -84,7 +84,7 @@ object AnimeFakeData {
             photoUrl = "https://wallpapercave.com/wp/wp4317974.jpg",
             author = "Koyoharu Gotouge",
             releaseDate = "Apr 3, 2016",
-            ranked = "Popularity #7",
+            ranked = "Rank #7",
             rating = 8.51,
             reviewers = 1928372,
             synopsis = "Ever since the death of his father, the burden of supporting the family has fallen upon Tanjirou Kamado's shoulders. Though living impoverished on a remote mountain, the Kamado family are able to enjoy a relatively peaceful and happy life. One day, Tanjirou decides to go down to the local village to make a little money selling charcoal. On his way back, night falls, forcing Tanjirou to take shelter in the house of a strange man, who warns him of the existence of flesh-eating demons that lurk in the woods at night.\n\n" +
@@ -96,7 +96,7 @@ object AnimeFakeData {
             photoUrl = "https://wallpapercave.com/wp/fAyLZOe.jpg",
             author = "Masashi Kishimoto",
             releaseDate = "Oct 3, 2002",
-            ranked = "Popularity #8",
+            ranked = "Rank #8",
             rating = 7.98,
             reviewers = 1875653,
             synopsis = "Moments prior to Naruto Uzumaki's birth, a huge demon known as the Kyuubi, the Nine-Tailed Fox, attacked Konohagakure, the Hidden Leaf Village, and wreaked havoc. In order to put an end to the Kyuubi's rampage, the leader of the village, the Fourth Hokage, sacrificed his life and sealed the monstrous beast inside the newborn Naruto.\n\n" +
@@ -108,7 +108,7 @@ object AnimeFakeData {
             photoUrl = "https://wallpapercave.com/wp/wp1809672.jpg",
             author = "Sui Ishida",
             releaseDate = "Jul 4, 2014",
-            ranked = "Popularity #9",
+            ranked = "Rank #9",
             rating = 7.79,
             reviewers = 1784282,
             synopsis = "A sinister threat is invading Tokyo: flesh-eating \"ghouls\" who appear identical to humans and blend into their population. Reserved college student Ken Kaneki buries his nose in books and avoids the news of the growing crisis. However, the appearance of an attractive woman named Rize Kamishiro shatters his solitude when she forwardly asks him on a date.\n\n" +
@@ -121,7 +121,7 @@ object AnimeFakeData {
             photoUrl = "https://wallpapercave.com/wp/wp1859934.jpg",
             author = "Yoshihiro Togashi",
             releaseDate = "Oct 2, 2011",
-            ranked = "Popularity #10",
+            ranked = "Rank #10",
             rating = 9.04,
             reviewers = 1642440,
             synopsis = "Hunters devote themselves to accomplishing hazardous tasks, all from traversing the world's uncharted territories to locating rare items and monsters. Before becoming a Hunter, one must pass the Hunter Examination—a high-risk selection process in which most applicants end up handicapped or worse, deceased.\n\n" +
@@ -134,7 +134,7 @@ object AnimeFakeData {
             photoUrl = "https://wallpapercave.com/wp/wp1937312.jpg",
             author = "Makoto Shinkai",
             releaseDate = "Aug 26, 2016",
-            ranked = "Popularity #11",
+            ranked = "Rank #11",
             rating = 8.85,
             reviewers = 1798225,
             synopsis = "Mitsuha Miyamizu, a high school girl, yearns to live the life of a boy in the bustling city of Tokyo—a dream that stands in stark contrast to her present life in the countryside. Meanwhile in the city, Taki Tachibana lives a busy life as a high school student while juggling his part-time job and hopes for a future in architecture.\n\n" +
@@ -147,7 +147,7 @@ object AnimeFakeData {
             photoUrl = "https://wallpapercave.com/wp/wp1858908.png",
             author = "Chiyomaru Shikura",
             releaseDate = "Apr 6, 2011",
-            ranked = "Popularity #12",
+            ranked = "Rank #12",
             rating = 9.07,
             reviewers = 1330430,
             synopsis = "Eccentric scientist Rintarou Okabe has a never-ending thirst for scientific exploration. Together with his ditzy but well-meaning friend Mayuri Shiina and his roommate Itaru Hashida, Rintarou founds the Future Gadget Laboratory in the hopes of creating technological innovations that baffle the human psyche. Despite claims of grandeur, the only notable \"gadget\" the trio have created is a microwave that has the mystifying power to turn bananas into green goo.\n\n" +
@@ -160,7 +160,7 @@ object AnimeFakeData {
             photoUrl = "https://wallpapercave.com/wp/wp1825494.jpg",
             author = "Yuu Kamiya",
             releaseDate = "Apr 9, 2014",
-            ranked = "Popularity #13",
+            ranked = "Rank #13",
             rating = 8.08,
             reviewers = 1480095,
             synopsis = "Sixteen sentient races inhabit Disboard, a world overseen by Tet, the One True God. The lowest of the sixteen—Imanity—consists of humans, a race with no affinity for magic. In a place where everything is decided through simple games, humankind seems to have no way out of their predicament—but the arrival of two outsiders poses a change.\n\n" +
@@ -173,7 +173,7 @@ object AnimeFakeData {
             photoUrl = "https://wallpapercave.com/wp/wp6085061.jpg",
             author = "Gege Akutami",
             releaseDate = "Oct 3, 2020",
-            ranked = "Popularity #14",
+            ranked = "Rank #14",
             rating = 8.64,
             reviewers = 1448437,
             synopsis = "Idly indulging in baseless paranormal activities with the Occult Club, high schooler Yuuji Itadori spends his days at either the clubroom or the hospital, where he visits his bedridden grandfather. However, this leisurely lifestyle soon takes a turn for the strange when he unknowingly encounters a cursed item. Triggering a chain of supernatural occurrences, Yuuji finds himself suddenly thrust into the world of Curses—dreadful beings formed from human malice and negativity—after swallowing the said item, revealed to be a finger belonging to the demon Sukuna Ryoumen, the \"King of Curses\".\n\n" +
@@ -185,7 +185,7 @@ object AnimeFakeData {
             photoUrl = "https://wallpapercave.com/wp/wp5165281.jpg",
             author = "Yoshitoki Oima",
             releaseDate = "Sep 17, 2016",
-            ranked = "Popularity #15",
+            ranked = "Rank #15",
             rating = 8.94,
             reviewers = 1514901,
             synopsis = "As a wild youth, elementary school student Shouya Ishida sought to beat boredom in the cruelest ways. When the deaf Shouko Nishimiya transfers into his class, Shouya and the rest of his class thoughtlessly bully her for fun. However, when her mother notifies the school, he is singled out and blamed for everything done to her. With Shouko transferring out of the school, Shouya is left at the mercy of his classmates. He is heartlessly ostracized all throughout elementary and middle school, while teachers turn a blind eye.\n\n" +
