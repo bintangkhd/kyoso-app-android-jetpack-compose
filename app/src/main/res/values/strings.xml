@@ -2,4 +2,5 @@
     <string name="app_name">KyosoAppSubmission</string>
     <string name="data_not_found">No data found!\nPlease search with another keyword.</string>
     <string name="error_message">Oops..\nSomething went wrong.</string>
+    <string name="search_hint">Search anime</string>
 </resources>

@@ -28,7 +28,6 @@ import com.dicoding.kyosoappsubmission.ui.navigation.NavScreen
 fun CustomAppBar(
     query: String,
     onQueryChange: (String) -> Unit,
-    onLoveClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
     val focusManager = LocalFocusManager.current
@@ -114,7 +113,6 @@ fun CustomAppBar(
                     Spacer(modifier = Modifier.width(10.dp))
 
                     IconButton(onClick = {
-                        onLoveClick()
                         navController.navigate(NavScreen.ProfilePage.route)
                     }) {
                         Icon(
@@ -141,7 +139,6 @@ fun CustomAppBarPreview() {
     CustomAppBar(
         query = "Naruto",
         onQueryChange = {},
-        onLoveClick = {},
         modifier = Modifier.fillMaxWidth()
     )
 }
