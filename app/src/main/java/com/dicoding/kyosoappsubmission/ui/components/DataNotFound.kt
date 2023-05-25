@@ -37,7 +37,7 @@ fun DataNotFound() {
     }
 }
 
-@Preview
+@Preview(showBackground = true)
 @Composable
 fun DataNotFoundPreview() {
     DataNotFound()

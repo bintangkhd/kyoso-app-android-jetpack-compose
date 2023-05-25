@@ -1,4 +1,4 @@
-package com.dicoding.kyosoappsubmission
+package com.dicoding.kyosoappsubmission.ui.main
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

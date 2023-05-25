@@ -38,7 +38,7 @@ fun ErrorOccurred() {
     }
 }
 
-@Preview
+@Preview(showBackground = true)
 @Composable
 fun ErrorOccurredPreview() {
     ErrorOccurred()
