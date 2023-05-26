@@ -1,4 +1,8 @@
 package com.dicoding.kyosoappsubmission.ui.main_app
 
-class KyosoApp {
-}
+import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
+
+@HiltAndroidApp
+class KyosoApp: Application()
+

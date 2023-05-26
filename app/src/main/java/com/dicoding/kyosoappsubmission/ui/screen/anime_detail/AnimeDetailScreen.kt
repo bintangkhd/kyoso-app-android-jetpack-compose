@@ -1,6 +1,5 @@
 package com.dicoding.kyosoappsubmission.ui.screen.anime_detail
 
-import android.annotation.SuppressLint
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -18,7 +17,6 @@ import androidx.compose.material.icons.rounded.Star
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -26,6 +24,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -37,13 +36,11 @@ import coil.compose.AsyncImage
 import com.dicoding.kyosoappsubmission.data.local_data.Anime
 import com.dicoding.kyosoappsubmission.data.repo.ResultCondition
 import com.dicoding.kyosoappsubmission.ui.components.ErrorOccurred
-import kotlinx.coroutines.launch
 import com.dicoding.kyosoappsubmission.R
-import com.dicoding.kyosoappsubmission.utils.compactDecimalFormat
-
+import com.dicoding.kyosoappsubmission.utils.numberFormat
 
 @Composable
-fun AnimeDetailScreen(id: Int, controller: NavController, scaffoldState: ScaffoldState) {
+fun AnimeDetailScreen(id: Int, controller: NavController) {
     val viewModel = hiltViewModel<AnimeDetailViewModel>()
     viewModel.animeDetail.collectAsState(ResultCondition.LoadingState).value.let { result ->
         when (result) {
@@ -53,8 +50,7 @@ fun AnimeDetailScreen(id: Int, controller: NavController, scaffoldState: Scaffol
                 AnimeDetail(
                     result.data,
                     controller,
-                    scaffoldState,
-                    viewModel::updateAnimeFavorite
+                    viewModel::updatesAnimeFavorite
                 )
             }
         }
@@ -65,10 +61,8 @@ fun AnimeDetailScreen(id: Int, controller: NavController, scaffoldState: Scaffol
 fun AnimeDetail(
     anime: Anime,
     controller: NavController,
-    scaffoldState: ScaffoldState,
     updateFavoriteAnime: (id: Int, isFavorite: Boolean) -> Unit,
 ) {
-    val coroutineScope = rememberCoroutineScope()
     val (id, name, photoUrl, author, releaseDate, ranked, rating, reviewers, synopsis, favorite) = anime
 
     Box(modifier = Modifier.fillMaxWidth()) {
@@ -101,7 +95,7 @@ fun AnimeDetail(
                         Text(
                             text = name,
                             fontWeight = FontWeight.Bold,
-                            fontSize = 24.sp,
+                            fontSize = 18.sp,
                         )
                         Spacer(modifier = Modifier.height(10.dp))
                         Row(
@@ -110,13 +104,13 @@ fun AnimeDetail(
 
                             ) {
                             Text(
-                                text = "Author",
+                                text = stringResource(R.string.author),
                                 fontWeight = FontWeight.Normal,
                                 fontSize = 12.sp,
                             )
                             Spacer(modifier = Modifier.width(24.dp))
                             Text(
-                                text = ":",
+                                text = stringResource(R.string.colon),
                                 fontWeight = FontWeight.Normal,
                                 fontSize = 12.sp,
                             )
@@ -133,13 +127,13 @@ fun AnimeDetail(
                             verticalAlignment = Alignment.CenterVertically
                         ) {
                             Text(
-                                text = "1st Aired",
+                                text = stringResource(R.string.first_aired),
                                 fontWeight = FontWeight.Normal,
                                 fontSize = 12.sp,
                             )
                             Spacer(modifier = Modifier.width(12.dp))
                             Text(
-                                text = ":",
+                                text = stringResource(R.string.colon),
                                 fontWeight = FontWeight.Normal,
                                 fontSize = 12.sp,
                             )
@@ -169,19 +163,12 @@ fun AnimeDetail(
                                     interactionSource = remember { MutableInteractionSource() },
                                     indication = null
                                 ) {
-                                    updateFavoriteAnime(id ?: 0, favorite)
-                                    coroutineScope.launch {
-                                        scaffoldState.snackbarHostState.showSnackbar(
-                                            message = "$name ${if (favorite) "removed from" else "added as"} favorite ",
-                                            actionLabel = "Dismiss",
-                                            duration = SnackbarDuration.Short
-                                        )
-                                    }
+                                    updateFavoriteAnime(id ?: 0, !favorite)
                                 },
                         )
-                        Spacer(modifier = Modifier.height(5.dp))
+                        Spacer(modifier = Modifier.height(3.dp))
                         Text(
-                            text = "Add to Favorite",
+                            text = stringResource(R.string.add_to_favorite),
                             fontWeight = FontWeight.Normal,
                             fontSize = 10.sp,
                         )
@@ -208,7 +195,7 @@ fun AnimeDetail(
                         )
                         Spacer(modifier = Modifier.height(3.dp))
                         Text(
-                            text = "Popularity",
+                            text = stringResource(R.string.popularity),
                             fontWeight = FontWeight.Normal,
                             fontSize = 14.sp,
                         )
@@ -239,7 +226,7 @@ fun AnimeDetail(
                         }
                         Spacer(modifier = Modifier.height(3.dp))
                         Text(
-                            text = "($reviewers)",
+                            text = "(${numberFormat(reviewers)})",
                             fontWeight = FontWeight.Normal,
                             fontSize = 14.sp,
                         )
@@ -249,7 +236,7 @@ fun AnimeDetail(
 
                 Spacer(modifier = Modifier.height(16.dp))
                 Text(
-                    text = "Synopsis",
+                    text = stringResource(R.string.synopsis),
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 12.sp,
                 )
@@ -278,13 +265,12 @@ fun AnimeDetail(
             Icon(
                 imageVector = Icons.Default.ArrowBack,
                 tint = Color.White,
-                contentDescription = null,
+                contentDescription = "Back",
             )
         }
     }
 }
 
-@SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Preview(showBackground = true)
 @Composable
 fun AnimeDetailPreview() {
@@ -300,15 +286,11 @@ fun AnimeDetailPreview() {
         synopsis = "Aware of the terrifying godlike power that has fallen into his hands, Light—under the alias Kira—follows his wicked sense of justice with the ultimate goal of cleansing the world of all evil-doers. The meticulous mastermind detective L is already on his trail, but as Light's brilliance rivals L's, the grand chase for Kira turns into an intense battle of wits that can only end when one of them is dead.",
         favorite = true
     )
-    val scaffoldState = rememberScaffoldState()
 
     AnimeDetail(
         anime = anime,
         controller = rememberNavController(),
-        scaffoldState = scaffoldState,
-        updateFavoriteAnime = { id, isFavorite ->
-            // Handle favorite button click
-        }
+        updateFavoriteAnime = { id, isFavorite -> }
     )
 
 }

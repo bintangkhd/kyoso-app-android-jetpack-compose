@@ -1,7 +1,6 @@
 package com.dicoding.kyosoappsubmission.ui.screen.main
 
 import androidx.compose.foundation.layout.Column
-import androidx.compose.material.ScaffoldState
 import androidx.compose.runtime.*
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -12,7 +11,7 @@ import com.dicoding.kyosoappsubmission.data.repo.ResultCondition
 import com.dicoding.kyosoappsubmission.ui.components.*
 
 @Composable
-fun HomeScreen(controller: NavController) {
+fun MainScreen(controller: NavController, moveToFavoriteScreen: () -> Unit) {
     val viewModel = hiltViewModel<MainViewModel>()
     val homeState by viewModel.homeState
 
@@ -26,6 +25,7 @@ fun HomeScreen(controller: NavController) {
                     controller = controller,
                     query = homeState.query,
                     onQueryChange = viewModel::onQueryChange,
+                    moveToFavorite = moveToFavoriteScreen
                 )
             }
         }
@@ -38,9 +38,10 @@ fun AnimeList(
     controller: NavController,
     query: String,
     onQueryChange: (String) -> Unit,
+    moveToFavorite: () -> Unit
 ) {
     Column {
-        CustomAppBar(query = query, onQueryChange = onQueryChange)
+        CustomAppBar(query = query, onQueryChange = onQueryChange, moveToFavoritePage = moveToFavorite)
         when (animeList.isEmpty()) {
             true -> DataNotFound()
             false -> LoadLazyAnimeList(animeList, controller)
@@ -86,7 +87,8 @@ fun AnimeListPreview() {
         animeList = animeList,
         controller = navController,
         query = query,
-        onQueryChange = { newQuery -> query = newQuery }
+        onQueryChange = { newQuery -> query = newQuery },
+        moveToFavorite = {}
     )
 
 }

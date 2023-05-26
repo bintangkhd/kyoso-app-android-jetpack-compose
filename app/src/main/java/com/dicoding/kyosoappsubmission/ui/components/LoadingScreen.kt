@@ -11,14 +11,14 @@ import androidx.compose.ui.tooling.preview.Preview
 @Composable
 fun LoadingScreen() {
     Box(
+        contentAlignment = Alignment.Center,
         modifier = Modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center
     ) {
         CircularProgressIndicator()
     }
 }
 
-@Preview
+@Preview(showBackground = true)
 @Composable
 fun LoadingScreenPreview() {
     LoadingScreen()

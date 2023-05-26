@@ -20,18 +20,16 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.navigation.compose.rememberNavController
 import com.dicoding.kyosoappsubmission.R
-import com.dicoding.kyosoappsubmission.ui.navigation.NavScreen
 
 @Composable
 fun CustomAppBar(
     query: String,
     onQueryChange: (String) -> Unit,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    moveToFavoritePage: () -> Unit
 ) {
     val focusManager = LocalFocusManager.current
-    val navController = rememberNavController()
 
     TopAppBar(
         modifier = modifier,
@@ -51,7 +49,7 @@ fun CustomAppBar(
                 ) {
                     Image(
                         painter = painterResource(R.drawable.app_logo),
-                        contentDescription = null,
+                        contentDescription = "app logo",
                         modifier = Modifier
                             .size(40.dp)
                     )
@@ -78,7 +76,11 @@ fun CustomAppBar(
                                 },
                             textStyle = TextStyle.Default,
                             singleLine = true,
-                            placeholder = { Text(text = stringResource(R.string.search_hint)) },
+                            placeholder = {
+                                Text(
+                                    text = stringResource(R.string.search_hint),
+
+                                ) },
                             colors = TextFieldDefaults.textFieldColors(
                                 backgroundColor = Color.Transparent,
                                 cursorColor = Color.Black,
@@ -89,7 +91,7 @@ fun CustomAppBar(
                             leadingIcon = {
                                 Icon(
                                     imageVector = Icons.Rounded.Search,
-                                    contentDescription = null,
+                                    contentDescription = "search",
                                     modifier = Modifier.size(24.dp)
                                 )
                             },
@@ -101,7 +103,7 @@ fun CustomAppBar(
                                     }) {
                                         Icon(
                                             imageVector = Icons.Filled.Clear,
-                                            contentDescription = null,
+                                            contentDescription = "clear",
                                             modifier = Modifier.size(24.dp)
                                         )
                                     }
@@ -112,12 +114,13 @@ fun CustomAppBar(
 
                     Spacer(modifier = Modifier.width(10.dp))
 
-                    IconButton(onClick = {
-                        navController.navigate(NavScreen.FavoritePage.route)
-                    }) {
+                    IconButton(
+                        onClick = moveToFavoritePage,
+
+                    ) {
                         Icon(
                             imageVector = Icons.Rounded.Favorite,
-                            contentDescription = null,
+                            contentDescription = "about_page",
                             tint = Color.Red,
                             modifier = Modifier
                                 .size(35.dp)
@@ -139,6 +142,7 @@ fun CustomAppBarPreview() {
     CustomAppBar(
         query = "Naruto",
         onQueryChange = {},
-        modifier = Modifier.fillMaxWidth()
+        modifier = Modifier.fillMaxWidth(),
+        moveToFavoritePage = {}
     )
 }

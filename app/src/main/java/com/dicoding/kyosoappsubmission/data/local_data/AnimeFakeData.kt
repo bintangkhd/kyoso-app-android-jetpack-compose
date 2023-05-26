@@ -5,7 +5,7 @@ object AnimeFakeData {
         Anime(
             id = 1,
             name="Attack on Titan",
-            photoUrl = "https://wallpapercave.com/wp/wp2114772.jpg",
+            photoUrl = "https://images3.alphacoders.com/653/653529.jpg",
             author = "Hajime Isayama",
             releaseDate = "Apr 7, 2013",
             ranked = "Rank #1",
@@ -17,7 +17,7 @@ object AnimeFakeData {
         Anime(
             id = 2,
             name="Death Note",
-            photoUrl = "https://wallpapercave.com/wp/er4khNt.jpg",
+            photoUrl = "https://images.alphacoders.com/667/667209.jpg",
             author = "Tsugumi Ohba",
             releaseDate = "Oct 4, 2006",
             ranked = "Rank #2",
@@ -30,7 +30,7 @@ object AnimeFakeData {
         Anime(
             id = 3,
             name="Fullmetal Alchemist: Brotherhood",
-            photoUrl = "https://wallpapercave.com/wp/PPhKgzo.jpg",
+            photoUrl = "https://images7.alphacoders.com/729/729209.jpg",
             author = "Hiromu Arakawa",
             releaseDate = "Apr 5, 2009",
             ranked = "Rank #3",
@@ -43,7 +43,7 @@ object AnimeFakeData {
         Anime(
             id = 4,
             name="One Punch Man",
-            photoUrl = "https://wallpapercave.com/wp/wp1809902.jpg",
+            photoUrl = "https://images2.alphacoders.com/864/864623.jpg",
             author = "ONE",
             releaseDate = "Oct 5, 2015",
             ranked = "Rank #4",
@@ -55,7 +55,7 @@ object AnimeFakeData {
         Anime(
             id = 5,
             name="Sword Art Online",
-            photoUrl = "https://wallpapercave.com/wp/wp1809740.png",
+            photoUrl = "https://images5.alphacoders.com/301/301609.jpg",
             author = "Reki Kawahara",
             releaseDate = "Jul 8, 2012",
             ranked = "Rank #5",
@@ -68,7 +68,7 @@ object AnimeFakeData {
         Anime(
             id = 6,
             name="My Hero Academia",
-            photoUrl = "https://wallpapercave.com/wp/wp1874036.jpg",
+            photoUrl = "https://images4.alphacoders.com/698/698782.jpg",
             author = "Kohei Horikoshi",
             releaseDate = "Apr 3, 2016",
             ranked = "Rank #6",
@@ -81,7 +81,7 @@ object AnimeFakeData {
         Anime(
             id = 7,
             name="Demon Slayer",
-            photoUrl = "https://wallpapercave.com/wp/wp4317974.jpg",
+            photoUrl = "https://images2.alphacoders.com/119/1198624.png",
             author = "Koyoharu Gotouge",
             releaseDate = "Apr 3, 2016",
             ranked = "Rank #7",
@@ -93,7 +93,7 @@ object AnimeFakeData {
         Anime(
             id = 8,
             name="Naruto",
-            photoUrl = "https://wallpapercave.com/wp/fAyLZOe.jpg",
+            photoUrl = "https://images8.alphacoders.com/487/487189.jpg",
             author = "Masashi Kishimoto",
             releaseDate = "Oct 3, 2002",
             ranked = "Rank #8",
@@ -105,7 +105,7 @@ object AnimeFakeData {
         Anime(
             id = 9,
             name="Tokyo Ghoul",
-            photoUrl = "https://wallpapercave.com/wp/wp1809672.jpg",
+            photoUrl = "https://images4.alphacoders.com/596/596845.jpg",
             author = "Sui Ishida",
             releaseDate = "Jul 4, 2014",
             ranked = "Rank #9",
@@ -118,7 +118,7 @@ object AnimeFakeData {
         Anime(
             id = 10,
             name="Hunter x Hunter (2011)",
-            photoUrl = "https://wallpapercave.com/wp/wp1859934.jpg",
+            photoUrl = "https://images.alphacoders.com/560/560960.png",
             author = "Yoshihiro Togashi",
             releaseDate = "Oct 2, 2011",
             ranked = "Rank #10",
@@ -131,7 +131,7 @@ object AnimeFakeData {
         Anime(
             id = 11,
             name="Your Name",
-            photoUrl = "https://wallpapercave.com/wp/wp1937312.jpg",
+            photoUrl = "https://images4.alphacoders.com/687/687986.jpg",
             author = "Makoto Shinkai",
             releaseDate = "Aug 26, 2016",
             ranked = "Rank #11",
@@ -144,7 +144,7 @@ object AnimeFakeData {
         Anime(
             id = 12,
             name= "Steins;Gate",
-            photoUrl = "https://wallpapercave.com/wp/wp1858908.png",
+            photoUrl = "https://images6.alphacoders.com/353/353759.png",
             author = "Chiyomaru Shikura",
             releaseDate = "Apr 6, 2011",
             ranked = "Rank #12",
@@ -157,7 +157,7 @@ object AnimeFakeData {
         Anime(
             id = 13,
             name= "No Game No Life",
-            photoUrl = "https://wallpapercave.com/wp/wp1825494.jpg",
+            photoUrl = "https://images7.alphacoders.com/658/658741.jpg",
             author = "Yuu Kamiya",
             releaseDate = "Apr 9, 2014",
             ranked = "Rank #13",
@@ -170,7 +170,7 @@ object AnimeFakeData {
         Anime(
             id = 14,
             name= "Jujutsu Kaisen",
-            photoUrl = "https://wallpapercave.com/wp/wp6085061.jpg",
+            photoUrl = "https://images5.alphacoders.com/118/1185028.jpg",
             author = "Gege Akutami",
             releaseDate = "Oct 3, 2020",
             ranked = "Rank #14",
@@ -182,7 +182,7 @@ object AnimeFakeData {
         Anime(
             id = 15,
             name="A Silent Voice",
-            photoUrl = "https://wallpapercave.com/wp/wp5165281.jpg",
+            photoUrl = "https://images4.alphacoders.com/826/826265.png",
             author = "Yoshitoki Oima",
             releaseDate = "Sep 17, 2016",
             ranked = "Rank #15",

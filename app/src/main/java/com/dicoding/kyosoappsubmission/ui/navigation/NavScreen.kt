@@ -2,9 +2,10 @@ package com.dicoding.kyosoappsubmission.ui.navigation
 
 sealed class NavScreen(val route: String) {
     object MainPage : NavScreen("home")
-    object AnimeDetailPage : NavScreen("home/{tourismId}") {
-        fun createRoute(tourismId: Int) = "home/$tourismId"
+    object AnimeDetailPage : NavScreen("home/{animeId}") {
+        fun createRoute(animeId: Int) = "home/$animeId"
     }
     object AboutPage : NavScreen("about_page")
-    object FavoritePage : NavScreen("favorite")
+    object AnimeFavoritePage : NavScreen("favorite")
 }
+

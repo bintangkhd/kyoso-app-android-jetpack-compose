@@ -1,6 +1,19 @@
 <resources>
     <string name="app_name">KyosoAppSubmission</string>
-    <string name="data_not_found">No data found!\nPlease search with another keyword.</string>
-    <string name="error_message">Oops..\nSomething went wrong.</string>
+    <string name="data_not_found">No data found!</string>
+    <string name="error_message">Oops.. Something went wrong.\nTry again later.</string>
     <string name="search_hint">Search anime</string>
+    <string name="popularity_ranked">Popularity %s</string>
+    <string name="popularity">Popularity</string>
+    <string name="by">By</string>
+    <string name="home">Home</string>
+    <string name="about">About</string>
+    <string name="about_name">M. Bintang Khadafi</string>
+    <string name="dicoding_email_account">bintangkhadafi2772@gmail.com</string>
+    <string name="author">Author</string>
+    <string name="colon">:</string>
+    <string name="first_aired">1st Aired</string>
+    <string name="add_to_favorite">Add to Favorite</string>
+    <string name="synopsis">Synopsis</string>
+    <string name="favorite">Favorite</string>
 </resources>

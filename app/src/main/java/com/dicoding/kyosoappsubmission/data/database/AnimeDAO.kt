@@ -15,7 +15,7 @@ interface AnimeDAO {
     @Query("SELECT * FROM anime WHERE id = :id")
     fun getAnimeDetail(id: Int): Flow<Anime>
 
-    @Query("SELECT * FROM anime WHERE name LIKE '%' || :query || '%'")
+    @Query("SELECT * FROM anime WHERE name LIKE '%' || :query || '%' OR author LIKE '%' || :query || '%' OR synopsis LIKE '%' || :query || '%'")
     fun searchAnime(query: String): Flow<List<Anime>>
 
     @Query("SELECT * FROM anime WHERE favorite = 1")

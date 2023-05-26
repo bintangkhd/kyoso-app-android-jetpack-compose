@@ -30,9 +30,4 @@ class AnimeFavoriteViewModel @Inject constructor(private val repo: AnimeRepo) : 
         }
     }
 
-    fun updateAnimeFavorite(id: Int, favorite: Boolean) {
-        viewModelScope.launch(Dispatchers.IO) {
-            repo.updateFavoriteAnime(id, favorite)
-        }
-    }
 }

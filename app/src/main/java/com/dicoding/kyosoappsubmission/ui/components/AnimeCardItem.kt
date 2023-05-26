@@ -17,6 +17,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -26,7 +27,6 @@ import coil.compose.AsyncImage
 import com.dicoding.kyosoappsubmission.R
 import com.dicoding.kyosoappsubmission.data.local_data.Anime
 import com.dicoding.kyosoappsubmission.ui.navigation.NavScreen
-
 
 @Composable
 fun AnimeCardItem(
@@ -41,14 +41,14 @@ fun AnimeCardItem(
             .fillMaxWidth()
             .clip(RoundedCornerShape(20.dp))
             .border(1.dp, Color.LightGray.copy(0.5f), RoundedCornerShape(20.dp))
-            .clickable { controller.navigate(NavScreen.AnimeDetailPage.createRoute(id ?: 0)) },
+            .clickable { controller.navigate(NavScreen.AnimeDetailPage.createRoute(id)) },
     ) {
         Column {
             Box {
                 AsyncImage(
                     model = photoUrl,
                     contentDescription = name,
-                    contentScale = ContentScale.FillWidth,
+                    contentScale = ContentScale.Fit,
                     placeholder = painterResource(R.drawable.template_image),
                     modifier = Modifier.fillMaxWidth()
                 )
@@ -62,7 +62,7 @@ fun AnimeCardItem(
                         horizontalArrangement = Arrangement.SpaceBetween
                     ) {
                         Text(
-                            text = "Popularity $ranked",
+                            text = stringResource(R.string.popularity) + " $ranked",
                             style = MaterialTheme.typography.body2.copy(fontSize = 12.sp),
                             color = MaterialTheme.colors.onPrimary
                         )
@@ -78,7 +78,7 @@ fun AnimeCardItem(
                 ) {
                     Text(
                         text = name,
-                        style = MaterialTheme.typography.h6.copy(fontSize = 24.sp)
+                        style = MaterialTheme.typography.h6.copy(fontSize = 18.sp)
                     )
 
                     Row(
@@ -103,7 +103,7 @@ fun AnimeCardItem(
 
                 Row(verticalAlignment = Alignment.CenterVertically) {
                     Text(
-                        text = "By",
+                        text = stringResource(R.string.by),
                         style = MaterialTheme.typography.body2
                     )
 
@@ -143,7 +143,7 @@ fun AnimeCardItemPreview() {
         rating = 8.78,
         reviewers = 10007849,
         favorite = false,
-        synopsis = "As a wild youth, elementary school student Shouya Ishida sought to beat boredom in the cruelest ways. When the deaf Shouko Nishimiya transfers into his class, Shouya and the rest of his class thoughtlessly bully her for fun."
+        synopsis = "Example"
     )
 
     val navController = rememberNavController()
