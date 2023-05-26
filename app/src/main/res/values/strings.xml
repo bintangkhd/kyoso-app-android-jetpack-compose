@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">KyosoAppSubmission</string>
+    <string name="app_name">Kyoso</string>
     <string name="data_not_found">No data found!</string>
     <string name="error_message">Oops.. Something went wrong.\nTry again later.</string>
     <string name="search_hint">Search anime</string>

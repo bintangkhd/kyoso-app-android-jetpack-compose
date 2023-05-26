@@ -27,6 +27,7 @@ import com.dicoding.kyosoappsubmission.ui.screen.anime_detail.AnimeDetailScreen
 import com.dicoding.kyosoappsubmission.ui.screen.anime_favorite.AnimeFavoriteScreen
 import com.dicoding.kyosoappsubmission.ui.screen.main.MainScreen
 import com.dicoding.kyosoappsubmission.R
+import com.dicoding.kyosoappsubmission.ui.screen.splash_screen.SplashScreen
 
 @Composable
 fun KyosoMain(modifier: Modifier = Modifier) {
@@ -36,7 +37,7 @@ fun KyosoMain(modifier: Modifier = Modifier) {
     val currentRoute = navBackStackEntry?.destination?.route
 
     val scaffoldState = rememberScaffoldState()
-    val shouldShowNavbar = currentRoute != null && currentRoute != NavScreen.AnimeDetailPage.route && currentRoute != NavScreen.AnimeFavoritePage.route
+    val shouldShowNavbar = currentRoute != null && currentRoute != NavScreen.AnimeDetailPage.route && currentRoute != NavScreen.AnimeFavoritePage.route && currentRoute != NavScreen.SplashScreenPage.route
 
     Scaffold(
         bottomBar = {
@@ -54,9 +55,13 @@ fun KyosoMain(modifier: Modifier = Modifier) {
     ) { innerPadding ->
         NavHost(
             navController = controller,
-            startDestination = NavScreen.MainPage.route,
+            startDestination = NavScreen.SplashScreenPage.route,
             modifier = Modifier.padding(innerPadding)
         ) {
+            composable(NavScreen.SplashScreenPage.route) {
+                SplashScreen(controller = controller)
+            }
+
             composable(NavScreen.MainPage.route) {
                 MainScreen(
                     controller = controller,
@@ -65,6 +70,7 @@ fun KyosoMain(modifier: Modifier = Modifier) {
                     }
                 )
             }
+
             composable(
                 route = NavScreen.AnimeDetailPage.route,
                 arguments = listOf(
@@ -74,9 +80,11 @@ fun KyosoMain(modifier: Modifier = Modifier) {
                 val animeId = it.arguments?.getInt("animeId") ?: 0
                 AnimeDetailScreen(animeId, controller)
             }
+
             composable(NavScreen.AboutPage.route) {
                 AboutScreen()
             }
+
             composable(NavScreen.AnimeFavoritePage.route) {
                 AnimeFavoriteScreen(controller)
             }
